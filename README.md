@@ -1,1 +1,1 @@
-# Only-Greek
+Откройте файл index.html

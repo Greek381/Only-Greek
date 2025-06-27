@@ -1,0 +1,149 @@
+ .slider-container {
+    position: relative;
+    top: 140px;
+    width: 975px;
+    height: 530px;
+    margin: 0 auto 195px;
+}
+    
+.swiper {
+    width: 100%;
+    height: 100%;
+    &-slide {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #333;
+        background: transparent !important;
+        // transition: opacity 0.5s ease;
+        &-active {
+            opacity: 1;
+        }
+        &-text__blue,
+        &-text__pink {
+            margin: 0;
+            font-weight: 700;
+            font-size: 200px;
+            line-height: 80%;
+            letter-spacing: -0.02em;
+            color: #5d5fef;
+            // transition: transform 0.2s ease;
+
+        }
+        &-text__pink {
+            color: #ef5da8;
+        }
+    }
+}
+    
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 530px;
+    height: 530px;
+    border: 1px solid #42567a;
+    border-radius: 50%;
+    opacity: .1;
+    &::after {
+        content: '';
+        position: absolute;
+        width: calc( 100vw - 57px);
+        top: 50%;
+        left: -390px;
+        height: 1px;
+        background-color: #42567a;
+    }
+}
+
+.pagination-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 530px;
+    height: 530px;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.digital-pagination {
+    position: absolute;
+    left: -140px;
+    bottom: 60px;
+    font-size: 14px;
+    color: #42567A;
+}
+
+.bullet {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: transparent;
+    background: #42567a;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease, background 0.3s ease;
+    z-index: 10;
+    &:hover {
+        width: 56px;
+        height: 56px;
+        color: #42567a;
+        background: #ffffff;
+        border: 1px solid #42567a;
+    }
+    &-active {
+        width: 56px;
+        height: 56px;
+        color: #42567a;
+        background: #ffffff;
+        border: 1px solid #42567a;
+    }
+   
+    &-label { 
+        position: absolute;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        left: 70px; 
+        top: 10px; 
+        color: transparent;
+    }
+     &-active  &-label {
+        color: #42567a;
+    }
+}
+
+.navigation {
+    position: absolute;
+    bottom: 0;
+    left: -15%;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid #42567A;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 11;
+    pointer-events: auto;
+}

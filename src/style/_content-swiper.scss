@@ -1,0 +1,71 @@
+.content-item {
+    & h3 {
+        margin: 0 0 15px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #3877ee;
+    }
+    & p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        color: #42567a;
+    }
+}
+
+.content-slider {
+    width: 1200px;
+    margin: 0 auto 50px;
+    overflow: hidden;
+    &-container {
+        position: relative;
+    }
+    & .swiper-slide-visible {
+        opacity: 1;
+    }
+    &  .swiper-wrapper {
+        opacity: 1;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    & .swiper-slide {
+        transition: transform 0.5s ease;
+    }
+}
+
+.swiper-button-prev.prev-btn-content,
+.swiper-button-next.next-btn-content {
+    opacity: 1;
+}
+
+.swiper-button-prev.prev-btn-content.swiper-button-disabled,
+.swiper-button-next.next-btn-content.swiper-button-disabled {
+    opacity: 0;
+}
+
+.next-btn-content {
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    background: rgba(56, 119, 238, 0.1);
+    border-radius: 50%;
+    &::after {
+        font-weight: 900;
+        font-size: 15px;
+    }
+}
+
+.prev-btn-content {
+    width: 40px;
+    height: 40px;
+    left: 5px;
+    background: rgba(56, 119, 238, 0.1);
+    border-radius: 50%;
+    &::after {
+        font-weight: 900;
+        font-size: 15px;
+    }
+}

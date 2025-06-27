@@ -1,0 +1,47 @@
+.column {
+    position: relative;
+    &__title {
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        margin: 0;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 120%;
+        color: #42567a;
+        &::after {
+            content: url('img/vector-17.svg');
+            position: absolute;
+            left: -80px;
+            top: 13px;
+        }
+    }
+    &-start {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #42567a;
+        opacity: .1;
+    }
+    &-middle {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        transform: translateX(-50%);
+        background-color: #42567a;
+        opacity: .1;
+    }
+    &-end {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #42567a;
+        opacity: .1;
+    }
+}
